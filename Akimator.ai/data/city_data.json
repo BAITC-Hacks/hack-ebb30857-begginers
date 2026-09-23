@@ -1,0 +1,145 @@
+{
+  "city": "Астана",
+  "budget_total": 100000000000,
+  "baseline": {
+    "transport": 48,
+    "green": 42,
+    "social": 50,
+    "safety": 45,
+    "services": 52
+  },
+  "weights": {
+    "transport": 0.25,
+    "green": 0.15,
+    "social": 0.20,
+    "safety": 0.20,
+    "services": 0.20
+  },
+  "categories": [
+    {
+      "id": "transport",
+      "title": "Транспорт",
+      "emoji": "🚍",
+      "measures": [
+        {
+          "id": "traffic_lights",
+          "name": "Оптимизация светофоров",
+          "cost": 10000000000,
+          "effects": { "transport": 12, "services": 2 }
+        },
+        {
+          "id": "bus_lanes",
+          "name": "Выделенные автобусные полосы",
+          "cost": 20000000000,
+          "effects": { "transport": 20, "green": 4, "services": -2 }
+        },
+        {
+          "id": "interchanges",
+          "name": "Новые транспортные развязки",
+          "cost": 30000000000,
+          "effects": { "transport": 28, "green": -8 }
+        }
+      ]
+    },
+    {
+      "id": "green",
+      "title": "Зеленые зоны",
+      "emoji": "🌳",
+      "measures": [
+        {
+          "id": "trees",
+          "name": "Посадка деревьев",
+          "cost": 10000000000,
+          "effects": { "green": 14, "safety": 2 }
+        },
+        {
+          "id": "district_park",
+          "name": "Новый районный парк",
+          "cost": 20000000000,
+          "effects": { "green": 22, "social": 4 }
+        },
+        {
+          "id": "city_park",
+          "name": "Большой городской парк",
+          "cost": 30000000000,
+          "effects": { "green": 32, "social": 6, "transport": -3 }
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "title": "Социальная инфраструктура",
+      "emoji": "🏫",
+      "measures": [
+        {
+          "id": "school_repair",
+          "name": "Ремонт школ",
+          "cost": 15000000000,
+          "effects": { "social": 14 }
+        },
+        {
+          "id": "new_school",
+          "name": "Новая школа",
+          "cost": 25000000000,
+          "effects": { "social": 22, "services": -2 }
+        },
+        {
+          "id": "clinic",
+          "name": "Новая поликлиника",
+          "cost": 30000000000,
+          "effects": { "social": 28, "safety": 3 }
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "title": "Безопасность",
+      "emoji": "🛡",
+      "measures": [
+        {
+          "id": "smart_lights",
+          "name": "Умное освещение",
+          "cost": 10000000000,
+          "effects": { "safety": 12, "green": -2 }
+        },
+        {
+          "id": "cameras",
+          "name": "Камеры наблюдения",
+          "cost": 20000000000,
+          "effects": { "safety": 20, "services": 3 }
+        },
+        {
+          "id": "integrated_security",
+          "name": "Комплексная система безопасности",
+          "cost": 30000000000,
+          "effects": { "safety": 30, "services": 5, "social": -3 }
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "Городские услуги",
+      "emoji": "🏙",
+      "measures": [
+        {
+          "id": "digital_services",
+          "name": "Цифровизация услуг",
+          "cost": 10000000000,
+          "effects": { "services": 14 }
+        },
+        {
+          "id": "utilities",
+          "name": "Улучшение коммунальных сервисов",
+          "cost": 20000000000,
+          "effects": { "services": 22, "social": 3 }
+        },
+        {
+          "id": "city_platform",
+          "name": "Единая городская цифровая платформа",
+          "cost": 30000000000,
+          "effects": { "services": 30, "transport": 3 }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akim AI — Аким на 5 часов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <p class="eyebrow">Akimator.AI · Astana Quality of Life</p>
+      <h1>Аким на 5 часов</h1>
+      <p class="subtitle">Примите 5 решений. Измените город. Посмотрите последствия.</p>
+    </header>
+
+    <section class="budget-panel" aria-live="polite">
+      <div class="budget-item">
+        <span>Бюджет</span>
+        <strong id="budget-total">100 млрд ₸</strong>
+      </div>
+      <div class="budget-item">
+        <span>Использовано</span>
+        <strong id="budget-used">0 млрд ₸</strong>
+      </div>
+      <div class="budget-item">
+        <span>Осталось</span>
+        <strong id="budget-left">100 млрд ₸</strong>
+      </div>
+      <div class="budget-bar" aria-hidden="true">
+        <div id="budget-fill"></div>
+      </div>
+    </section>
+
+    <p id="budget-error" class="error hidden"></p>
+
+    <section class="cards" id="cards"></section>
+
+    <div class="actions">
+      <button id="simulate-btn" type="button" disabled>Симулировать сценарий</button>
+      <button id="reset-btn" type="button" class="ghost">Сбросить сценарий</button>
+    </div>
+
+    <section id="results" class="results hidden">
+      <div class="score-card">
+        <p class="score-label">Astana Quality of Life Score</p>
+        <p id="aqol-value" class="score-value">— / 100</p>
+        <p id="aqol-band" class="score-band"></p>
+        <p id="budget-result" class="budget-result"></p>
+      </div>
+
+      <div id="bars" class="bars"></div>
+
+      <article class="analysis">
+        <p id="analysis-summary" class="summary"></p>
+        <div class="analysis-grid">
+          <div>
+            <h2>Сильные стороны сценария</h2>
+            <ul id="strengths"></ul>
+          </div>
+          <div>
+            <h2>Риски сценария</h2>
+            <ul id="risks"></ul>
+          </div>
+        </div>
+        <h2>Последствия решений</h2>
+        <ul id="consequences"></ul>
+      </article>
+    </section>
+  </div>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="spinner"></div>
+    <p>Считаем последствия решений…</p>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
